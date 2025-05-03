@@ -27,6 +27,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"]
+    "assetBundlePatterns": ["**/*"],
+    "owner": "smoealy",
+    "extra": {
+      "eas": {
+        "projectId": "3b046a82-6d4a-4d2e-9492-0a5a3bc63015"
+      }
+    }
   }
 }
