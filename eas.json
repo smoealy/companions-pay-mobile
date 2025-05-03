@@ -1,14 +1,23 @@
 {
   "cli": {
-    "version": ">= 3.13.0"
+    "version": ">= 6.0.0"
   },
   "build": {
     "production": {
-      "developmentClient": false,
-      "distribution": "internal"
+      "ios": {
+        "buildType": "app-store",
+        "appleTeamId": "GFQ5HFGH6Y"
+      },
+      "android": {
+        "buildType": "apk"
+      }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleTeamId": "GFQ5HFGH6Y"
+      }
+    }
   }
 }
