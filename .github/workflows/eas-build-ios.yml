@@ -3,11 +3,18 @@ name: Build iOS app with EAS
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build-ios:
     name: Build iOS with EAS
     runs-on: ubuntu-latest
     steps:
+      - name: Dummy step to confirm run
+        run: echo "✅ Workflow started successfully"
+
       - uses: actions/checkout@v3
 
       - name: Install EAS CLI
@@ -28,4 +35,4 @@ jobs:
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: |
-          eas build --platform ios --profile production --non-interactive 
+          eas build --platform ios --profile production --non-interactive
