@@ -28,11 +28,14 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
-    "owner": "smoealy",
+    "owner": "smoeali",
     "extra": {
       "eas": {
         "projectId": "3b046a82-6d4a-4d2e-9492-0a5a3bc63015"
       }
+    },
+    "cli": {
+      "appVersionSource": "project"
     }
   }
 }
