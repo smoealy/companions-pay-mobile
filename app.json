@@ -12,7 +12,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.companions.pay"
+      "bundleIdentifier": "com.companions.pay",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -36,6 +39,9 @@
     },
     "cli": {
       "appVersionSource": "project"
-    }
+    },
+    "sdkVersion": "50.0.0",
+    "platforms": ["ios", "android"]
   }
 }
+
