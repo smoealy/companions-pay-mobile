@@ -1,0 +1,31 @@
+name: Build iOS app with EAS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    name: Build iOS with EAS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
+
+      - name: Authenticate with Expo
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: eas whoami
+
+      - name: Set up iOS credentials
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          eas credentials --platform ios --non-interactive || true
+
+      - name: Build iOS app
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          eas build --platform ios --profile production --non-interactive
